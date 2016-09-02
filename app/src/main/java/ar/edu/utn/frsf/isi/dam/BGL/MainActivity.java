@@ -99,25 +99,26 @@ public class MainActivity extends AppCompatActivity {
         float tasa_anual = (float) 0.0;
         if(dias<30){
             if(Capital<=5000){
-                tasa_anual = (float) 0.25;
+                tasa_anual = Float.parseFloat(getResources().getString(R.string.tasa1));
+
             }
             else if(Capital<=99999){
-                tasa_anual = (float) 0.3;
+                tasa_anual = Float.parseFloat(getResources().getString(R.string.tasa3));
             }
             else{
-                tasa_anual = (float) 0.35;
+                tasa_anual = Float.parseFloat(getResources().getString(R.string.tasa5));
             }
 
         }
         else{
             if(Capital<=5000){
-                tasa_anual = (float) 0.275;
+                tasa_anual = Float.parseFloat(getResources().getString(R.string.tasa2));
             }
             else if(Capital<=99999){
-                tasa_anual = (float) 0.323;
+                tasa_anual = Float.parseFloat(getResources().getString(R.string.tasa4));
             }
             else{
-                tasa_anual = (float) 0.385;
+                tasa_anual = Float.parseFloat(getResources().getString(R.string.tasa6));
             }
         }
     return (float) (Capital * (Math.pow(1.0+tasa_anual,dias/360.0)-1));
