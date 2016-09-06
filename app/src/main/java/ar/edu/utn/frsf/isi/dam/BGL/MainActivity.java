@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else{
-            if(Capital<=5000){
+            if(Capital<=5500){
                 tasa_anual = Float.parseFloat(getResources().getString(R.string.tasa2));
             }
             else if(Capital<=99999){
